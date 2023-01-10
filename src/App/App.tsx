@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "../View/Layout/Layout";
 import "./App.scss";
 
-function App() {
+function App(): JSX.Element {
     return (
         <BrowserRouter>
             <Routes>
