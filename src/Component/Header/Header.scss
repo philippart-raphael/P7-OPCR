@@ -1,0 +1,32 @@
+@import "./src/SCSS/variables.scss";
+@import "./src/SCSS/mixins.scss";
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 24px;
+  line-height: 34.22px;
+  & > ul {
+    display: flex;
+    column-gap: 2rem;
+    align-items: center;
+    justify-items: flex-end;
+    & > li {
+      list-style-type: none;
+      & > a {
+        color: $colorSecondary;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+@include breakpoint-max(480px) {
+  .Header {
+    padding: 10px 20px;
+  }
+}
