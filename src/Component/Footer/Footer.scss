@@ -1,0 +1,23 @@
+@import "./src/SCSS/variables.scss";
+
+.Footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 15%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: #000;
+  color: $colorPrimary;
+
+  & > div {
+    font-size: 24px;
+  }
+
+  & > div > img {
+    height: 35px;
+  }
+}
