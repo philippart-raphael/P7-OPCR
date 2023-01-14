@@ -1,0 +1,45 @@
+@import "./src/SCSS/variables.scss";
+
+.Carrousel {
+  height: 415px;
+  position: relative;
+
+  &Right {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &Left {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
+  }
+
+  &Position {
+    position: absolute;
+    color: $colorPrimary;
+    font-size: 18px;
+    line-height: 32.4px;
+    bottom: 10px;
+    left: 50%;
+    z-index: 10;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover &Right,
+  &:hover &Left,
+  &:hover &Position{
+    cursor: pointer;
+    opacity: 1;
+  }
+}

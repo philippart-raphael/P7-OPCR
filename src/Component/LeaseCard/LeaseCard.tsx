@@ -10,7 +10,6 @@ export default function LeaseCard(): JSX.Element {
 
     useEffect(() => {
         getLeases().then((res) => {
-            console.log(res!.data);
             setLeases(res!.data);
         });
     }, []);
