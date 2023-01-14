@@ -3,6 +3,7 @@ import Carrousel from "../../Component/Carrousel/Carrousel";
 import { useEffect, useState } from "react";
 import { InterfaceLease } from "../../Type/Lease";
 import { getLease } from "../../Service/Service";
+import LeaseInfoContainer from "../../Component/LeaseInfoContainer/LeaseInfoContainer";
 import "./Lease.scss";
 
 export default function Lease(): JSX.Element {
@@ -20,7 +21,11 @@ export default function Lease(): JSX.Element {
         <>
             {lease.map((data: any, index: number) => {
                 return (
-                    <Carrousel key={index} pictures={data!.pictures} title={data!.title} />
+                    <div key={`${index}-${Math.random()}`}>
+                        <Carrousel key={`Carrousel-${index}-${Math.random()}`} pictures={data!.pictures}
+                                   title={data!.title} />
+                        <LeaseInfoContainer key={`LeaseInfoContainer-${index + 1}-${Math.random()}`} lease={data!} />
+                    </div>
                 );
             })}
         </>

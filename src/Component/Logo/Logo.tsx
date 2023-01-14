@@ -3,7 +3,7 @@ import styled from "styled-components";
 import "./Logo.scss";
 
 const StyledImg = styled.img<{ imgFilter: string, imgWidth: string }>`
-  filter: ${(props) => props.imgFilter ? `brightness(0%) invert(1)` : "brightness(100%)"};
+  filter: ${(props) => props.imgFilter ? "brightness(0%) invert(1)" : "brightness(100%)"};
   width: ${(props) => props.imgWidth ? `${props.imgWidth}` : "200px"};
 `;
 

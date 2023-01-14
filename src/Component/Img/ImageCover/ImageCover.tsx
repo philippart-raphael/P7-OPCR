@@ -1,5 +1,5 @@
-import "./ImageCover.scss";
 import styled from "styled-components";
+import "./ImageCover.scss";
 
 const StyledImg = styled.img<{ imgRadius: string }>`
   border-radius: ${(props) => props.imgRadius ? props.imgRadius : "0"};

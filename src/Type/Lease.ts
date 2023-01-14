@@ -7,6 +7,8 @@ export interface InterfaceLease {
         host: {
             name: string;
             picture: string;
+            length: number;
+            map: Function,
         };
         location: string;
         pictures: string[];

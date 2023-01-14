@@ -1,9 +1,9 @@
 import { Key, useEffect, useState } from "react";
 import { getLeases } from "../../Service/Service";
 import { InterfaceLease } from "../../Type/Lease";
-import "./LeaseCard.scss";
 import ImageCover from "../Img/ImageCover/ImageCover";
 import { Link } from "react-router-dom";
+import "./LeaseCard.scss";
 
 export default function LeaseCard(): JSX.Element {
     const [leases, setLeases] = useState<InterfaceLease>([]);
