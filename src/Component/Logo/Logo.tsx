@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import "./Logo.scss";
 
-const StyledImg = styled.img<{ imgFilter: string, imgWidth: string }>`
+const StyledImg = styled.img<{ imgFilter: string }>`
   filter: ${(props) => props.imgFilter ? "brightness(0%) invert(1)" : "brightness(100%)"};
-  width: ${(props) => props.imgWidth ? `${props.imgWidth}` : "200px"};
 `;
 
 export default function Logo(
@@ -13,11 +12,10 @@ export default function Logo(
         altText,
         link,
         pathLink,
-        imgWidth,
         imgFilter
-    }: { img: string, altText: string, link: boolean, pathLink: string, imgWidth: string, imgFilter: string }
+    }: { img: string, altText: string, link: boolean, pathLink: string, imgFilter: string }
 ): JSX.Element {
-    const imgBalise = <StyledImg src={img} alt={altText} className="Logo" imgFilter={imgFilter} imgWidth={imgWidth} />;
+    const imgBalise = <StyledImg src={img} alt={altText} className="Logo" imgFilter={imgFilter} />;
     return (
         <div>
             {link ? <Link to={pathLink}>

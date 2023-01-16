@@ -25,8 +25,9 @@
   }
 }
 
-@include breakpoint-max(480px) {
+@include breakpoint-max($breakpointMobile) {
   .Header {
-    padding: 10px 20px;
+    font-size: 18px;
+    margin-top: 15px;
   }
 }

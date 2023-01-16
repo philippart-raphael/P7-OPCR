@@ -16,5 +16,7 @@ export interface InterfaceLease {
         tags: string[];
         cover: string;
     },
+    find: Function,
     map: Function,
+    json: Function,
 }

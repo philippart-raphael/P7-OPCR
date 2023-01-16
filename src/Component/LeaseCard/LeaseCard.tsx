@@ -6,11 +6,11 @@ import { Link } from "react-router-dom";
 import "./LeaseCard.scss";
 
 export default function LeaseCard(): JSX.Element {
-    const [leases, setLeases] = useState<InterfaceLease>([]);
+    const [leases, setLeases] = useState<InterfaceLease|never[]>([]);
 
     useEffect(() => {
         getLeases().then((res) => {
-            setLeases(res!.data);
+            setLeases(res! as InterfaceLease);
         });
     }, []);
 

@@ -1,5 +1,13 @@
 @import "./src/SCSS/variables";
+@import "./src/SCSS/mixins.scss";
 
 .BackgroundContainer {
   background: $colorBackgroundContainer;
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .BackgroundContainer {
+    font-size: 18px;
+    background: transparent;
+  }
 }
