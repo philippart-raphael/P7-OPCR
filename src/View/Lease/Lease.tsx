@@ -24,8 +24,8 @@ export default function Lease(): JSX.Element {
                     <Carrousel pictures={lease!.pictures} title={lease!.title} />
                     <LeaseInfoContainer lease={lease!} />
                     <div className="LeaseAccordion">
-                        <Accordion active={false} title="Titre" value={lease!.description} valueIsArray={false}/>
-                        <Accordion active={false} title="Titre" value={lease!.equipments} valueIsArray={true}/>
+                        <Accordion active={false} title="Description" value={lease!.description} valueIsArray={false} txtSizeContent=""/>
+                        <Accordion active={false} title="Équipements" value={lease!.equipments} valueIsArray={true} txtSizeContent=""/>
                     </div>
                 </>
             )}
