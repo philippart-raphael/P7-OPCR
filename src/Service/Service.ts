@@ -11,10 +11,10 @@ export const getLeases = async (): Promise<AxiosResponse> => {
     }
 };
 
-export const getLease = async (id: string): Promise<InterfaceLease> =>  {
+export const getLease = async (id: string): Promise<InterfaceLease[0]> =>  {
     try {
         const response = await getLeases();
-        return [response!.data.find((logement: InterfaceLease[0]) => logement.id === id)];
+        return response!.data.find((logement: InterfaceLease[0]) => logement.id === id);
     } catch (error) {
         console.error(error);
         throw(error);

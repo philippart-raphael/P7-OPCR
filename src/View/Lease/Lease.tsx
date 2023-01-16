@@ -1,33 +1,34 @@
 import { useParams } from "react-router-dom";
 import Carrousel from "../../Component/Carrousel/Carrousel";
-import { useEffect, useState } from "react";
+import { SetStateAction, useEffect, useState } from "react";
 import { InterfaceLease } from "../../Type/Lease";
 import { getLease } from "../../Service/Service";
 import LeaseInfoContainer from "../../Component/LeaseInfoContainer/LeaseInfoContainer";
+import Accordion from "../../Component/Accordion/Accordion";
 import "./Lease.scss";
 
 export default function Lease(): JSX.Element {
-    const [lease, setLease] = useState<InterfaceLease>([]);
+    const [lease, setLease] = useState<InterfaceLease[0]|SetStateAction<any>>(null);
     const { id } = useParams();
 
     useEffect(() => {
         getLease(id!).then((res) => {
-            console.log(res);
             setLease(res);
         });
     }, [id]);
 
     return (
-        <>
-            {lease.map((data: any, index: number) => {
-                return (
-                    <div key={`${index}-${Math.random()}`}>
-                        <Carrousel key={`Carrousel-${index}-${Math.random()}`} pictures={data!.pictures}
-                                   title={data!.title} />
-                        <LeaseInfoContainer key={`LeaseInfoContainer-${index + 1}-${Math.random()}`} lease={data!} />
+        <div>
+            {lease && (
+                <>
+                    <Carrousel pictures={lease!.pictures} title={lease!.title} />
+                    <LeaseInfoContainer lease={lease!} />
+                    <div className="LeaseAccordion">
+                        <Accordion active={false} title="Titre" value={lease!.description} valueIsArray={false}/>
+                        <Accordion active={false} title="Titre" value={lease!.equipments} valueIsArray={true}/>
                     </div>
-                );
-            })}
-        </>
+                </>
+            )}
+        </div>
     );
 }

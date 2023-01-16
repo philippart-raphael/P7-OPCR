@@ -1,0 +1,10 @@
+.LeaseAccordion {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 50px;
+  margin-top: 20px;
+
+  & > div {
+    flex-basis: 50%;
+  }
+}

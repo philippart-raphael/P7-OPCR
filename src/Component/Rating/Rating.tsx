@@ -10,9 +10,9 @@ export default function Rating({ rating }: { rating: string }): JSX.Element {
                     const ratingValue = index + 1;
 
                     if (ratingProps <= ratingValue) {
-                        return (<Star isFilled={true} />);
+                        return (<Star key={index} isFilled={true} />);
                     } else {
-                        return (<Star isFilled={false} />);
+                        return (<Star key={index} isFilled={false} />);
                     }
                 })}
             </div>
