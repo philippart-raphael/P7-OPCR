@@ -3,14 +3,11 @@ import ImageGradient from "../Img/ImageGradient/ImageGradient";
 import "./Banner.scss";
 
 export default function Banner(
-    {
-        img,
-        textCenter,
-        altText
-    }: { img: string, textCenter: string, altText: string }): JSX.Element {
+    { img, textCenter, altText }
+        : { img: string, textCenter: string, altText: string }): JSX.Element {
     return (
         <div className="Banner">
-            <ImageCover src={img} altText={altText} imgRadius="25px"/>
+            <ImageCover src={img} altText={altText} imgRadius="25px" />
             {textCenter && <div className="Banner_Text">{textCenter}</div>}
             <ImageGradient imgOpacity={0.3} imgRadius="25px" />
         </div>

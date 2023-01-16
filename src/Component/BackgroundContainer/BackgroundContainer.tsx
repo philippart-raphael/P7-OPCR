@@ -6,10 +6,10 @@ const StyledDiv = styled.div<{ divRadius: string }>`
   border-radius: ${(props) => props.divRadius ? `${props.divRadius}` : "0"};
 `;
 
-export default function BackgroundContainer({ divRadius, children }: { divRadius: string, children: ReactNode }): JSX.Element {
+export default function BackgroundContainer(
+    { divRadius, children }
+        : { divRadius: string, children: ReactNode }): JSX.Element {
     return (
-        <StyledDiv className="BackgroundContainer" divRadius={divRadius}>
-            { children }
-        </StyledDiv>
+        <StyledDiv className="BackgroundContainer" divRadius={divRadius}>{children}</StyledDiv>
     );
 }

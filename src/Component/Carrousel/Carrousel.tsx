@@ -21,7 +21,9 @@ export default function Carrousel({ title, pictures }: { title: string, pictures
             <section className="Carrousel">
                 {pictures.map((image: any, index: Key | null | undefined) => {
                     return (
-                        index === current && (<ImageCover key={`ImageCover-${index}-${Math.random()}`} src={image} altText={`Photo ${index + 1}, de la location: ${title}`} imgRadius="25px" />)
+                        index === current && (<ImageCover key={`ImageCover-${index}-${Math.random()}`} src={image}
+                                                          altText={`Photo ${index + 1}, de la location: ${title}`}
+                                                          imgRadius="25px" />)
                     );
                 })}
                 {length > 1 && (
