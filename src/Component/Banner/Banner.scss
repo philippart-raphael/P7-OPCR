@@ -1,4 +1,5 @@
 @import "./src/SCSS/variables.scss";
+@import "./src/SCSS/mixins";
 
 .Banner {
   position: relative;
@@ -18,5 +19,21 @@
     font-size: 48px;
     font-weight: 300;
     z-index: 999;
+  }
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .Banner {
+    height: 111px;
+    & > img {
+      border-radius: 10px;
+    }
+    & > .ImageGradient {
+      border-radius: 10px;
+    }
+    &_Text {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 }

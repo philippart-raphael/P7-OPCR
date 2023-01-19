@@ -1,3 +1,6 @@
+@import "./src/SCSS/variables.scss";
+@import "./src/SCSS/mixins.scss";
+
 .LeaseAccordion {
   display: flex;
   justify-content: space-between;
@@ -6,5 +9,12 @@
 
   & > div {
     flex-basis: 50%;
+  }
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .LeaseAccordion {
+    display: block;
+    margin-top: 10px;
   }
 }

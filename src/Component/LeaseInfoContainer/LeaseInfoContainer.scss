@@ -1,6 +1,7 @@
 @import "./src/SCSS/variables.scss";
+@import "./src/SCSS/mixins.scss";
 
-.LeaseInfoC{
+.LeaseInfoC {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
@@ -19,6 +20,7 @@
   &Host {
     display: flex;
     align-items: center;
+
     & > div:first-child {
       font-size: 18px;
       margin-right: 15px;
@@ -28,10 +30,35 @@
   & > div:first-child {
     flex-basis: 80%;
   }
+
   & > div:last-child {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+  }
+}
+
+@include breakpoint-max($breakpointMobile) {
+  .LeaseInfoC {
+    flex-direction: column;
+
+    &Title {
+      font-size: 18px;
+      line-height: 25.67px;
+    }
+
+    &Location {
+      font-size: 14px;
+      line-height: 19.96px;
+    }
+
+    & > div:last-child {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
   }
 }
