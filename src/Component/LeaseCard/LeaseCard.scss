@@ -49,3 +49,14 @@
     }
   }
 }
+
+@include breakpoint-min-max($breakpointMobile, $breakpointTablet) {
+  .Lease {
+    padding: 0;
+
+    &Card {
+      height: 255px;
+      flex-basis: 48%;
+    }
+  }
+}

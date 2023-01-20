@@ -77,3 +77,27 @@
     }
   }
 }
+
+@include breakpoint-min-max($breakpointMobile, $breakpointTablet) {
+  .Carrousel {
+    height: 355px;
+    margin-top: 10px;
+
+    &Right {
+      & > img {
+        height: 30px;
+      }
+    }
+
+    &Left {
+      & > img {
+        height: 30px;
+      }
+    }
+
+    &Position {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+}

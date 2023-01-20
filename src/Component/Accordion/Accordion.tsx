@@ -34,7 +34,7 @@ export default function Accordion(
             </div>
             {isActive &&
                 <div className="AccordionContent">
-                    <BackgroundContainer divRadius="10px" children={<ul>{valueProcess}</ul>} />
+                    <BackgroundContainer children={<ul>{valueProcess}</ul>} />
                 </div>
             }
         </div>

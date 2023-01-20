@@ -5,7 +5,7 @@
   padding: 40px 100px;
 }
 
-@include breakpoint-max($breakpointMobile) {
+@include breakpoint-max($breakpointTablet) {
   .Wrapper {
     padding: 10px 20px;
   }

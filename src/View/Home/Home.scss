@@ -1,10 +1,9 @@
 @import "./src/SCSS/variables";
 @import "./src/SCSS/mixins.scss";
 
-@include breakpoint-max($breakpointMobile) {
+@include breakpoint-max($breakpointTablet) {
   .Home {
-    .BackgroundContainer {
-      font-size: 14px;
+    & > .BackgroundContainer {
       background: transparent;
     }
   }
