@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "../Logo/Logo";
 import "./Header.scss";
 
@@ -9,8 +9,8 @@ export default function Header({ img }: { img: string }): JSX.Element {
             <nav className="Header">
                 <Logo img={img} altText="Logo Kasa" link={true} pathLink="/" imgFilter=""/>
                 <ul>
-                    <li><Link to="/">Accueil</Link></li>
-                    <li><Link to="/about">À Propos</Link></li>
+                    <li><NavLink to="/">Accueil</NavLink></li>
+                    <li><NavLink to="/about">À Propos</NavLink></li>
                 </ul>
             </nav>
         </header>

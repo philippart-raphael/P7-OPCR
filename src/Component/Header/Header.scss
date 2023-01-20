@@ -14,7 +14,7 @@
     justify-items: flex-end;
     & > li {
       list-style-type: none;
-      & > a {
+      & > a:not(.active) {
         color: $colorSecondary;
         text-decoration: none;
         &:hover {
@@ -23,6 +23,11 @@
       }
     }
   }
+}
+
+.active {
+  color: $colorSecondary;
+  text-decoration: underline;
 }
 
 @include breakpoint-max($breakpointMobile) {
