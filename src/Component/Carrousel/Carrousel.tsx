@@ -24,7 +24,6 @@ export default function Carrousel({ title, pictures }: { title: string, pictures
                         index === current && (
                             <ImageCover key={`ImageCover-${index}-${Math.random()}`} src={image}
                                         altText={`Photo ${index + 1}, de la location: ${title}`}
-                                        imgRadius="25px"
                             />
                         )
                     );

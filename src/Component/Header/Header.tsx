@@ -7,7 +7,7 @@ export default function Header({ img }: { img: string }): JSX.Element {
     return (
         <header>
             <nav className="Header">
-                <Logo img={img} altText="Logo Kasa" link={true} pathLink="/" imgFilter=""/>
+                <Logo img={img} altText="Logo Kasa" link={true} pathLink="/"/>
                 <ul>
                     <li><NavLink to="/">Accueil</NavLink></li>
                     <li><NavLink to="/about">À Propos</NavLink></li>

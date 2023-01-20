@@ -19,6 +19,7 @@
 
   & > div > img {
     width: 122px;
+    filter: brightness(0%) invert(1);
   }
 }
 

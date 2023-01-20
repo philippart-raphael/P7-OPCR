@@ -3,6 +3,9 @@
 
 .ImageRounded {
   width: 64px;
+  & > img {
+    border-radius: 50px;
+  }
 }
 
 @include breakpoint-max($breakpointMobile) {

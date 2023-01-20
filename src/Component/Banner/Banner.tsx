@@ -7,9 +7,9 @@ export default function Banner(
         : { img: string, textCenter: string, altText: string }): JSX.Element {
     return (
         <div className="Banner">
-            <ImageCover src={img} altText={altText} imgRadius="25px" />
+            <ImageCover src={img} altText={altText} />
             {textCenter && <div className="Banner_Text">{textCenter}</div>}
-            <ImageGradient imgOpacity={0.3} imgRadius="25px" />
+            <ImageGradient />
         </div>
     );
 }

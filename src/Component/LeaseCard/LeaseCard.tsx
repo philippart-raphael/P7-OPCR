@@ -19,7 +19,7 @@ export default function LeaseCard(): JSX.Element {
             {leases.map((data: any, index: Key | null | undefined) => {
                 return (
                     <Link className="LeaseCard" key={index} to={`location/${data!.id}`}>
-                        <ImageCover src={data!.cover} altText={data!.title} imgRadius="10px" />
+                        <ImageCover src={data!.cover} altText={data!.title} />
                         <div className="LeaseCardTitle">{ data!.title }</div>
                     </Link>
                 );

@@ -1,12 +1,7 @@
 import { ReactElement, useState } from "react";
 import BackgroundContainer from "../BackgroundContainer/BackgroundContainer";
 import vector from "./img/Vector.png";
-import styled from "styled-components";
 import "./Accordion.scss";
-
-const StyledDiv = styled.div<{ txtSizeContent: string }>`
-  font-size: ${(props) => props.txtSizeContent ? `${props.txtSizeContent}` : "18px"};
-`;
 
 export default function Accordion(
     {
@@ -38,9 +33,9 @@ export default function Accordion(
                 </div>
             </div>
             {isActive &&
-                <StyledDiv className="AccordionContent" txtSizeContent="">
+                <div className="AccordionContent">
                     <BackgroundContainer divRadius="10px" children={<ul>{valueProcess}</ul>} />
-                </StyledDiv>
+                </div>
             }
         </div>
     );

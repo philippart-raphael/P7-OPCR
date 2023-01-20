@@ -3,6 +3,7 @@
 
 .Carrousel {
   height: 415px;
+  margin-top: 20px;
   position: relative;
 
   &Right {
@@ -56,6 +57,7 @@
 @include breakpoint-max($breakpointMobile) {
   .Carrousel {
     height: 255px;
+    margin-top: 10px;
 
     &Right {
       & > img {

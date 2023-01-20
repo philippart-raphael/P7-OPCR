@@ -25,6 +25,7 @@
 @include breakpoint-max($breakpointMobile) {
   .Banner {
     height: 111px;
+    margin-top: 10px;
     & > img {
       border-radius: 10px;
     }

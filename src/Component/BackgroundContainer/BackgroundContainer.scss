@@ -3,6 +3,7 @@
 
 .BackgroundContainer {
   background: $colorBackgroundContainer;
+  border-radius: 25px;
 }
 
 @include breakpoint-max($breakpointMobile) {
