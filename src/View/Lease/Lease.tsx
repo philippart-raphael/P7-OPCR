@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Carrousel from "../../Component/Carrousel/Carrousel";
 import { SetStateAction, useEffect, useState } from "react";
 import { InterfaceLease } from "../../Type/Lease";
@@ -10,9 +10,13 @@ import "./Lease.scss";
 export default function Lease(): JSX.Element {
     const [lease, setLease] = useState<InterfaceLease[0]|SetStateAction<any>>(null);
     const { id } = useParams();
+    const navigate = useNavigate();
 
     useEffect(() => {
         getLease(id!).then((res) => {
+            if (!res) {
+                navigate("/404");
+            }
             setLease(res);
         });
     }, [id]);

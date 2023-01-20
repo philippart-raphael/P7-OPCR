@@ -7,7 +7,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 40px;
-  margin-top: 20px;
+  margin-top: 40px;
   column-gap: 20px;
   row-gap: 20px;
 
@@ -23,7 +23,7 @@
     }
 
     &:hover {
-      opacity: 0.9;
+      filter: brightness(90%) opacity(80%)
     }
 
     &Title {
@@ -42,6 +42,7 @@
 @include breakpoint-max($breakpointMobile) {
   .Lease {
     padding: 0;
+    margin-top: 20px;
 
     &Card {
       height: 255px;
@@ -53,6 +54,7 @@
 @include breakpoint-min-max($breakpointMobile, $breakpointTablet) {
   .Lease {
     padding: 0;
+    margin-top: 20px;
 
     &Card {
       height: 255px;
